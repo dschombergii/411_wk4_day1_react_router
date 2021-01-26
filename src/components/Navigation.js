@@ -1,7 +1,7 @@
-import React, { Component, Fragment } from 'react'
+import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-// Import { Link } here //
+import { Link } from 'react-router-dom'
 
 const Navigation = () => {
     return (
@@ -15,10 +15,18 @@ const Navigation = () => {
                 </Typography>
                 <ul className="nav-list">
                     <li className="nav-list-item">
-                        {/* Add Link here */}
+                        <Link to="/">
+                            <Typography variant="h6" style={{ flexGrow: "1" }}>
+                                Home
+                            </Typography>
+                        </Link>
                     </li>
                     <li className="nav-list-item">
-                        {/* Add Link here */}
+                        <Link to="/about">
+                            <Typography variant="h6" style={{ flexGrow: "1" }}>
+                                About
+                            </Typography>
+                        </Link>
                     </li>
                 </ul>
             </Toolbar>
